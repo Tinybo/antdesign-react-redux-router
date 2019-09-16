@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as homeActions from '../../actions/home';
+import * as homeActions from './action';
 import './home.scss';
 
 /**

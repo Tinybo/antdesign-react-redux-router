@@ -1,4 +1,4 @@
-import * as actions from '../actions/home';     // 导入home页面的所有方法。
+import * as actions from './action';     // 导入home页面的所有方法。
 import { Object } from 'core-js';
 
 // home页的初始化数据

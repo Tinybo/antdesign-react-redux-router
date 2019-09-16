@@ -2,16 +2,16 @@ import App from '../app';
 import Home from '../page/home';
 import Music from '../page/music';
 import About from '../page/about';
-import Auth from '../page/auth';
 
-// export default (<Route path="/" component={ App }>
-//     <Route path="" component={ Home } />
-//     <Route path="/home" component={ Home } />
-//     <Route path="/music" component={ Music } />
-//     <Route path="/about" component={ About } />
-//     <IndexRoute component={ Home } />
-// </Route>);
-
+// 写法一：
+/* export default (<Route path="/" component={ App }>
+    <Route path="" component={ Home } />
+    <Route path="/home" component={ Home } />
+    <Route path="/music" component={ Music } />
+    <Route path="/about" component={ About } />
+    <IndexRoute component={ Home } />
+</Route>);
+ */
 export const routes = [
     {
         path: '/',
@@ -25,6 +25,8 @@ export const routes = [
                 path: '/about',
                 component: About,
                 onEnter: () => {
+                    // 表示下一行不进行Eslint检查
+                    // eslint-disable-next-line
                     console.log('我进入About页面了。');
                 },
                 onLeave: () => {

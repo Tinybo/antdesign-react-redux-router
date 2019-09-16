@@ -241,6 +241,22 @@ module.exports = {
       // Disable require.ensure as it's not a standard language feature.
       { parser: { requireEnsure: false } },
 
+      /**
+       * @author Tinybo
+       * @date 2019 09 16
+       * @content 增加Eslint检查。
+       */
+      {
+        test: /\.js[x]?$/,
+        enforce: 'pre',
+        use: [{
+            loader: 'eslint-loader', 
+            options: { fix: true }
+        }],
+        include: path.resolve(__dirname, './src/**/*.js'),
+        exclude: /node_modules/
+      },
+
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
